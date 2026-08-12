@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshit's Bus Services | Deluxe Saloon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SCENERY LAYER -->
+    <div class="sky">
+        <div class="stars"></div>
+    </div>
+    
+    <div class="road-area">
+        <div class="road">
+            <div class="marking"></div>
+        </div>
+
+        <!-- THE BUS -->
+        <div class="bus">
+            <div class="bus-top">
+                <div class="windows">
+                    <div class="glass"></div><div class="glass"></div><div class="glass"></div>
+                </div>
+                <div class="bus-text">
+                    <h2 class="bus-name">HARSHIT'S BUS SERVICES</h2>
+                    <p class="route">GANJ BASODA <small>⇄</small> INDORE</p>
+                </div>
+            </div>
+            <div class="bus-bottom">
+                <div class="wheel"></div>
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DELUXE SALOON UI -->
+    <div class="overlay">
+        <div class="title-logo">
+            <h1>DELUXE<span>SALOON</span></h1>
+        </div>
+
+        <!-- DAD'S CAR RADIO INTERFACE -->
+        <div class="radio-container">
+            <div class="radio-body">
+                <div class="radio-screen">
+                    <div class="lcd-text">
+                        <div class="freq">FM 98.5</div>
+                        <div id="track-title" class="scrolling-text">READY TO DRIVE...</div>
+                    </div>
+                    <div class="visualizer">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                
+                <div class="radio-controls">
+                    <div class="knob-wrap">
+                        <div class="knob" id="vol-knob"></div>
+                        <span>VOL</span>
+                    </div>
+
+                    <div class="buttons">
+                        <button id="prev">PREV</button>
+                        <button id="play-pause" class="play-btn">PLAY</button>
+                        <button id="next">NEXT</button>
+                    </div>
+
+                    <div class="knob-wrap">
+                        <div class="knob" id="tune-knob"></div>
+                        <span>TUNE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YOUTUBE PLAYER (HIDDEN) -->
+    <div id="youtube-player"></div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+:root {
+    --gold: #d4af37;
+    --lcd-green: #39ff14;
+    --deep-red: #7b0000;
+}
+
+body, html {
+    margin: 0; padding: 0;
+    height: 100%; width: 100%;
+    background: #000;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+/* BUS & ROAD ANIMATION */
+.sky {
+    height: 60vh;
+    background: linear-gradient(#001122, #003366);
+}
+
+.road-area {
+    height: 40vh;
+    background: #111;
+    position: relative;
+}
+
+.road {
+    width: 100%; height: 100px;
+    background: #222;
+    position: absolute; top: 20%;
+    border-top: 4px solid #333;
+    border-bottom: 4px solid #333;
+    overflow: hidden;
+}
+
+.marking {
+    width: 200%; height: 10px;
+    border-top: 5px dashed rgba(255,255,255,0.2);
+    position: absolute; top: 45%;
+    animation: drive 1.5s linear infinite;
+}
+
+@keyframes drive {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100px); }
+}
+
+/* THE BUS */
+.bus {
+    position: absolute; bottom: 30%; left: 15%;
+    width: 380px; z-index: 5;
+    animation: vibration 0.2s infinite;
+}
+
+.bus-top {
+    background: var(--deep-red);
+    height: 110px; border-radius: 10px 100px 5px 5px;
+    border: 2px solid var(--gold);
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.bus-text { text-align: center; color: var(--gold); }
+.bus-name { font-family: 'Playfair Display', serif; margin: 10px 0 0 0; font-size: 1.2rem; }
+.route { font-size: 0.7rem; letter-spacing: 2px; color: white; margin: 0; }
+
+.wheel {
+    width: 50px; height: 50px; background: #000;
+    border: 5px solid #222; border-radius: 50%;
+    display: inline-block; margin: -25px 40px 0 40px;
+    animation: rotate 0.5s linear infinite;
+}
+
+@keyframes rotate { to { transform: rotate(360deg); } }
+@keyframes vibration { 0% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+
+/* RADIO UI */
+.overlay {
+    position: absolute; top: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column; justify-content: space-between;
+    z-index: 10; pointer-events: none;
+}
+
+.title-logo { padding: 40px; text-align: center; pointer-events: auto; }
+.title-logo h1 { color: white; font-size: 3.5rem; font-family: 'Playfair Display'; letter-spacing: 5px; }
+.title-logo span { color: var(--gold); font-style: italic; }
+
+.radio-container {
+    padding-bottom: 40px;
+    display: flex; justify-content: center;
+    pointer-events: auto;
+}
+
+.radio-body {
+    background: linear-gradient(#333, #111);
+    width: 500px; padding: 20px;
+    border-radius: 15px; border: 4px solid #444;
+    box-shadow: 0 20px 50px rgba(0,0,0,1);
+}
+
+.radio-screen {
+    background: #051a05; height: 80px;
+    border-radius: 5px; border: 3px solid #000;
+    padding: 10px; color: var(--lcd-green);
+    font-family: 'Orbitron', sans-serif;
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+.scrolling-text { font-size: 0.9rem; margin-top: 5px; text-transform: uppercase; }
+
+.radio-controls {
+    display: flex; justify-content: space-between; align-items: center; margin-top: 20px;
+}
+
+.knob {
+    width: 50px; height: 50px; background: #222;
+    border-radius: 50%; border: 3px solid #444;
+}
+
+.buttons button {
+    background: #222; color: #888; border: 1px solid #444;
+    padding: 10px 15px; margin: 0 5px; cursor: pointer;
+}
+
+.play-btn { color: white !important; border-color: var(--gold) !important; }
